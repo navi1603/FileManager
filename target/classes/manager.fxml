@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="center" stylesheets="style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ukrainec.file.manager.Controller">
+    <MenuBar>
+        <Menu text="Файл">
+            <MenuItem onAction="#menuItemFileExitAction" text="Выход" />
+        </Menu>
+    </MenuBar>
+    <TextField fx:id="pathField" editable="false" focusTraversable="false"/>
+    <ListView fx:id="fileList" onMouseClicked="#filesListClicked" VBox.vgrow="ALWAYS" />
+
+    <HBox spacing="5">
+        <Button maxWidth="Infinity" text="Просмотр" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" text="Копирование" onAction="#copyAction" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" text="Перемещение" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" text="Удаление" onAction="#deleteAction" HBox.hgrow="ALWAYS" />
+      <padding>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </padding>
+    </HBox>
+</VBox>
